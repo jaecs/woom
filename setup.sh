@@ -36,11 +36,11 @@ echo "installing libplist..."
 brew install libplist
 
 echo "installing $theme theme..."
-plutil -insert "Window Settings" -xml "$(curl -s https://raw.githubusercontent.com/jaecs/woom/main/themes/$theme.terminal)" ~/Library/Preferences/com.apple.Terminal.plist
+plutil -insert "Window Settings.$theme" -xml "$(curl -s https://raw.githubusercontent.com/jaecs/woom/main/themes/$theme.terminal)" ~/Library/Preferences/com.apple.Terminal.plist
 
 ehco "setting $theme default..."
-defaults write com.apple.Terminal "Default Window Settings" -string "Material-Theme"
-defaults write com.apple.Terminal "Default Window Settings" -string "Material-Theme"
+defaults write com.apple.Terminal "Default Window Settings" -string "$theme"
+defaults write com.apple.Terminal "Startup Window Settings" -string "$theme"
 
 ehco "Your all set. Congratulation!"
 ehco "Please close and reopen your terminal. Enjoy!"

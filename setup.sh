@@ -27,9 +27,10 @@ echo "installing nerd-fonts ..."
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 
+#TODO: store .zshrc on github
 echo "installing spaceship..."
 brew install spaceship
-echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.zshrc
+echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >> ~/.zshrc
 
 # install libplist to use plutil to control terminal theme
 echo "installing libplist..."
@@ -38,9 +39,9 @@ brew install libplist
 echo "installing $theme theme..."
 plutil -insert "Window Settings.$theme" -xml "$(curl -s https://raw.githubusercontent.com/jaecs/woom/main/themes/$theme.terminal)" ~/Library/Preferences/com.apple.Terminal.plist
 
-ehco "setting $theme default..."
+echo "setting $theme as default theme..."
 defaults write com.apple.Terminal "Default Window Settings" -string "$theme"
 defaults write com.apple.Terminal "Startup Window Settings" -string "$theme"
 
-ehco "Your all set. Congratulation!"
-ehco "Please close and reopen your terminal. Enjoy!"
+echo "Your all set. Congratulation!"
+echo "Please close and reopen your terminal. Enjoy!"

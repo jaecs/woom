@@ -8,16 +8,6 @@ if [[ $OSTYPE != "darwin"* ]]; then
   exit 1 
 fi
 
-echo "checking homebrew..."
-if [[ $(command -v brew) == "" ]]; then
-  echo "Installing homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "Updating homebrew..."
-  brew update
-fi
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 echo "installing git, vim and zsh ..."
 brew install git
 brew install vim

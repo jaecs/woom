@@ -1,10 +1,4 @@
 #!/usr/bin/env zsh
-#
-# Spaceship ZSH
-#
-# Author: Jacs Chen, jacs.chen@gmail.com
-# License: MIT
-# https://github.com/spaceship-prompt/xxx
 
 # ------------------------------------------------------------------------------
 # GIT USER PLUGIN

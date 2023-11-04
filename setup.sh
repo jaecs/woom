@@ -17,12 +17,16 @@ echo "installing nerd-fonts ..."
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 
-#TODO: store .zshrc on github
+# TODO: store .zshrc on github
 echo "installing spaceship..."
 brew install spaceship
 echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >> ~/.zshrc
 
-# install libplist to use plutil to control terminal theme
+echo "coping .spaceshiprc to $Home" 
+curl -LJO https://raw.githubusercontent.com/jaecs/woom/main/spaceship/spaceshiprc.zsh && mv spaceshiprc.zsh $HOME/.spaceshiprc.zsh
+
+
+# Install libplist to use plutil to control terminal theme.
 echo "installing libplist..."
 brew install libplist
 
